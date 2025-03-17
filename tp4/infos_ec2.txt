@@ -1,0 +1,1 @@
+PUBLIC_IP: 44.211.170.18 ID: i-0b6f405a167d17332 AZ: us-east-1d 
