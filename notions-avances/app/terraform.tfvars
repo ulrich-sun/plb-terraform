@@ -6,7 +6,7 @@ key_name      = "devops-ulrich"
 #instance_name_map = {
 #  Name = "plb_ulrich"
 #}
-instance_name_map = "plb_ulrich"
+instance_name_map = ["ulrich", "Luc", "Yann", "Nadege", "Jean"]
 script_name         = "nginx"
 username            = "ubuntu"
 connexion_type      = "ssh"

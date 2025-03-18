@@ -1,12 +1,16 @@
 resource "aws_instance" "web" {
-  ami             = var.ami
+  ami             = lookup(var.ami,var.region)
   instance_type   = var.instance_type
   count = var.instance_count
   key_name        = var.key_name
   availability_zone = var.az
   security_groups = [var.security_group_name]
-  tags            = {
-    Name = "${var.instance_name_map}.${count.index}"
+  #tags            = {
+  #  Name = "${var.instance_name_map}.${count.index}"
+  #}
+
+  tags = {
+    Name = element(var.instance_name_map,count.index)
   }
 
 #  provisioner "local-exec" {

@@ -28,3 +28,6 @@ variable "az" {
 variable "instance_count" {
   
 }
+variable "region" {
+  
+}
