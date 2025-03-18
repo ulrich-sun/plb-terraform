@@ -16,8 +16,6 @@ provider "aws" {
 terraform {
   backend "s3" {
     region = "us-east-1"
-    access_key = "AKIA5OYEFMPBYK57WYPG"
-    secret_key = "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"
     bucket = "plb-backend"
     key = "plb.tfstate"
     
