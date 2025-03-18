@@ -17,3 +17,14 @@ variable "instance_name_map" {
   }
   description = "Nom de mon instance"
 }
+
+resource "aws_instance" "name" {
+  ami = 
+  instance_type = 
+  count = var.istest == false ? 1: 0 
+}
+
+variable "istest" {
+  type = bool 
+  default = false
+}

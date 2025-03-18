@@ -1,0 +1,1 @@
+PUBLIC_IP: 34.227.9.64 ID: i-09342de2895c95f53 AZ: us-east-1a 
