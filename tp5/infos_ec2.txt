@@ -1,0 +1,1 @@
+PUBLIC_IP: 44.208.161.185 ID: i-0fed4288dd8e4cfbe AZ: us-east-1d 

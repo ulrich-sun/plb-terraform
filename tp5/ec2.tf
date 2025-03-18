@@ -19,7 +19,6 @@ terraform {
     region = "us-east-1"
     access_key = "AKIA5OYEFMPBYK57WYPG"
     secret_key = "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"
-    profile = "default"
     bucket = "plb-backend"
     key = "plb.tfstate"
     
@@ -39,7 +38,7 @@ resource "aws_instance" "web" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt update",
-      "sudo apt install nginx -y" ,
+      "sudo apt install nginx -y",
       "sudo systemctl start nginx"
     ]
     connection {
@@ -50,4 +49,5 @@ resource "aws_instance" "web" {
     }
     #    script = ["./nginx.sh"]
   }
+  depends_on = [ aws_security_group.sg ]
 }
