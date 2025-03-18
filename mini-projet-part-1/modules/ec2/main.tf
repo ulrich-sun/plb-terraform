@@ -10,7 +10,7 @@ resource "aws_instance" "web" {
     command = "echo PUBLIC_IP: ${self.public_ip} ID: ${self.id} AZ: ${self.availability_zone} > ip_ec2.txt"
   }
   provisioner "remote-exec" {
-    script = ["./scripts/${var.script_name}.sh"]
+    scripts = ["./scripts/${var.script_name}.sh"]
     connection {
       type        = var.connexion_type
       user        = var.username
